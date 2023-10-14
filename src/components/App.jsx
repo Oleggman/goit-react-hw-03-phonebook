@@ -15,6 +15,13 @@ export default class App extends Component {
     filter: '',
   }
 
+  componentDidMount() {
+    const savedContacts = localStorage.getItem(LS_KEY);
+    if (savedContacts !== null) {
+      this.setState({ contacts: JSON.parse(savedContacts) });
+    }
+  }
+
   componentDidUpdate(_, prevState) {
     if (prevState.contacts !== this.contacts) {
       localStorage.setItem(LS_KEY, JSON.stringify(this.state.contacts));
