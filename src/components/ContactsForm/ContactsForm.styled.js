@@ -85,9 +85,7 @@ export const SubmitBtn = styled.button`
 `;
 
 export const Error = styled(ErrorMessage)`
-  background-color: #fce4e4;
   width: fit-content;
-  border: 1px solid #fcc2c3;
   text-align: center;
   padding: 4px 8px;
   color: #cc0033;
@@ -95,9 +93,7 @@ export const Error = styled(ErrorMessage)`
   font-size: 13px;
   font-weight: bold;
   line-height: 20px;
-  text-shadow: 1px 1px rgba(250,250,250,.3);
-  border-radius: 10px;
   position: absolute;
   right: 0;
-  top: 10%;
+  bottom: -5%;
 `;

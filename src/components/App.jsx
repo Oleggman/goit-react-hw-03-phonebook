@@ -6,6 +6,7 @@ import { ContactsForm } from './ContactsForm/ContactsForm'
 import { ContactsBook } from './ContactsBook/ContactsBook'
 import { Filter } from './Filter/Filter'
 import { MainContainer, AppTitle, ContactsList, ContactsTitle } from './App.styled';
+
 export default class App extends Component {
   state = {
     contacts: [],
