@@ -7,10 +7,18 @@ import { ContactsBook } from './ContactsBook/ContactsBook'
 import { Filter } from './Filter/Filter'
 import { MainContainer, AppTitle, ContactsList, ContactsTitle } from './App.styled';
 
+const LS_KEY = "contacts";
+
 export default class App extends Component {
   state = {
     contacts: [],
     filter: '',
+  }
+
+  componentDidUpdate(_, prevState) {
+    if (prevState.contacts !== this.contacts) {
+      localStorage.setItem(LS_KEY, JSON.stringify(this.state.contacts));
+    }
   }
 
   onAddContacts = (values, helpers) => {
